@@ -36,6 +36,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'diskdelivery.core',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -66,7 +67,7 @@ DATABASES = {
 # Internationalization
 # https://docs.djangoproject.com/en/1.7/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'pt-BR'
 
 TIME_ZONE = 'UTC'
 
@@ -81,3 +82,30 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.7/howto/static-files/
 
 STATIC_URL = '/static/'
+
+
+# Static files (CSS, JavaScript, Images)
+# https://docs.djangoproject.com/en/1.7/howto/static-files/
+STATIC_ROOT = os.path.join(BASE_DIR,"diskdelivery/static/")
+
+
+STATICFILES_DIRS = (
+    # Put strings here, like "/home/html/static" or "C:/www/django/static".
+    # Always use forward slashes, even on Windows.
+    # Don't forget to use absolute paths, not relative paths.
+    ("img", "%s/img" % STATIC_ROOT),
+    ("css", "%s/css" % STATIC_ROOT),
+    ("js", "%s/js" % STATIC_ROOT),
+    ("fonts", "%s/fonts" % STATIC_ROOT),
+    ("less", "%s/less" % STATIC_ROOT),
+    ("scss", "%s/scss" % STATIC_ROOT),
+)
+
+TEMPLATE_LOADERS = (
+    'django.template.loaders.filesystem.Loader',
+    'django.template.loaders.app_directories.Loader',
+)
+
+LOGIN_URL = "/login/"
+LOGOUT_URL = "/logout"
+LOGIN_REDIRECT_URL = "/"
