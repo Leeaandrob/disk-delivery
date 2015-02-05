@@ -3,6 +3,7 @@ body
 	background-color: #F8F8F8 ;
 }
 
+
 .header
 {
 	background-image: linear-gradient(to top, #600000,#480000  );
@@ -25,4 +26,17 @@ body
 .navbar-default .navbar-nav > .active > a:hover {
 	color:#A0A0A0 ;
 	background-color: transparent;
+}
+
+.login
+{
+	margin-left: 720px;
+	margin-right: 10px;
+}
+.topo-login {
+	position: relative;
+	float: right;
+	z-index: 9999;
+	right: 40px;
+	top: 10px;
 }
