@@ -1,0 +1,28 @@
+body
+{
+	background-color: #F8F8F8 ;
+}
+
+.header
+{
+	background-image: linear-gradient(to top, #600000,#480000  );
+}
+
+.navbar-default .navbar-nav > li > a {
+	color:white;
+}
+
+.navbar-default .navbar-nav > li > a:hover {
+	color:#A0A0A0 ;
+}
+
+/* first level active menu items on hover/focus */
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:focus {
+	color: white;
+	background-color: transparent;
+}
+.navbar-default .navbar-nav > .active > a:hover {
+	color:#A0A0A0 ;
+	background-color: transparent;
+}
