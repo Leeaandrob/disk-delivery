@@ -1,0 +1,24 @@
+<script src="{{ STATIC_URL }}js/jquery-2.0.0.min.js"></script>
+<script src="{{ STATIC_URL }}js/bootstrap.min.js"></script>        
+
+<link href="{{ STATIC_URL }}css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+<link href="{{ STATIC_URL }}css/bootstrap.css" rel="stylesheet" type="text/css"  />
+<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/login.css" />
+
+
+<div class="container">
+	<div class="login-container">
+            <div id="output"></div>
+            <div class="titulo">
+                <h4>Disk Delívery =)</h4>
+            </div>    
+            <div class="form-box">
+                <form action="" method="post">
+                    {%csrf_token%}
+                    {{form.username}}<br/>
+                    {{form.password}}
+                    <button class="btn btn-info btn-block login" type="submit">Entrar</button>
+                </form>
+            </div>
+        </div>
+</div>

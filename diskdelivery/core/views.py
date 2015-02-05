@@ -14,8 +14,15 @@ from django.contrib.auth.decorators import user_passes_test,login_required
 from django.contrib.auth.models import Group,User
 
 
+def inicio_site(request):
+	'''
+		@inicio_site: View para renderizar a página inicial do site
+	'''
+	return render(request,"inicio_site.html")
+
+@login_required
 def home(request):
 	'''
-		@home: View para renderizar a página inicial do site
+		@home: View para acesso da interface adminsitrativa
 	'''
 	return render(request,"home.html")
