@@ -1,0 +1,43 @@
+
+
+#box{
+	width:90%;
+	margin:auto;
+	margin-top: 15px;
+    margin-bottom: 2em;
+    border: 1px solid #DDD;
+    background-color: #FFF;
+    padding-top: 1.2em;
+    padding-bottom: 1.2em;
+    padding-left: 1.2em;
+    padding-right: 1.2em;
+    border-radius: 0.3em;
+    box-shadow: 0px 1px 3px #CCC;    
+}
+
+
+.bs-callout{padding:20px;margin:20px 0;border:1px solid #eee;border-left-width:5px;border-radius:3px}
+.bs-callout h4{margin-top:0;margin-bottom:5px}
+.bs-callout p:last-child{margin-bottom:0}
+.bs-callout code{border-radius:3px}
+.bs-callout+.bs-callout{margin-top:-5px}
+
+.bs-callout-danger{border-left-color:#d9534f}
+.bs-callout-danger h4{color:#d9534f}
+
+.bs-callout-warning{border-left-color:#f0ad4e}
+.bs-callout-warning h4{color:#f0ad4e}
+
+.bs-callout-info{border-left-color:#5bc0de}
+.bs-callout-info h4{color:#5bc0de}
+
+.topo-login a
+{
+    color:white;
+}
+
+.td-edit
+{
+    width:100px;
+    text-align:center;
+}

@@ -34,9 +34,12 @@ body
 	margin-right: 10px;
 }
 .topo-login {
-	position: relative;
+	position: absolute;
 	float: right;
 	z-index: 9999;
-	right: 40px;
+	right: 10px;
+	width:400px;
 	top: 10px;
 }
+
+

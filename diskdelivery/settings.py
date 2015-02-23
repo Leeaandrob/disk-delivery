@@ -37,6 +37,10 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'diskdelivery.core',
+    'diskdelivery.comidas',
+    'diskdelivery.restaurantes',
+    'diskdelivery.clientes',
+    'diskdelivery.cardapios',
 )
 
 MIDDLEWARE_CLASSES = (

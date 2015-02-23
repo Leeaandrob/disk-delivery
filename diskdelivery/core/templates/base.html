@@ -2,28 +2,54 @@
 <head>
 	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 	<meta charset="utf-8">		
+
+
+	<script src="{{ STATIC_URL }}js/jquery-2.0.0.min.js"></script>
+    <script src="{{ STATIC_URL }}js/bootstrap.min.js"></script>        
+    <script src="{{ STATIC_URL }}js/jquery-ui-1.10.2.min.js"></script>    
+    <script src="{{ STATIC_URL }}js/bootstrap-datepicker.js"></script>
+    <script src="{{ STATIC_URL }}js/bootstrap-datepicker.pt-BR.js"></script>
+    <script src="{{ STATIC_URL }}js/jquery.maskedinput.js"></script>
+    <script src="{{ STATIC_URL }}js/bootbox.min.js"></script>
+    <link href="{{ STATIC_URL }}css/font-awesome.min.css" rel="stylesheet" type="text/css" />
 	<link href="{{STATIC_URL}}css/bootstrap.css" rel="stylesheet">
 	<link href="{{STATIC_URL}}css/style.css" rel="stylesheet">
 	<link href="{{STATIC_URL}}css/topo.css" rel="stylesheet">
-
+	<link href="{{STATIC_URL}}css/principal.css" rel="stylesheet">
+	<link href="{{STATIC_URL}}css/pagination.css" rel="stylesheet">
 
 </head>
 
 <body class="front scroll-spy">
 	<header class="header fixed clearfix">
-		<div class="col-md-5">
+		<div class="menu">
 			<nav class="navbar navbar-default" role="navigation">
 				<div class="collapse navbar-collapse  scrollspy smooth-scroll" id="navbar-collapse-1">
-					<ul class="nav navbar-nav navbar-right">
+					<ul class="nav navbar-nav navbar-left">
 						<li class="active">
-							<a href="#home" class="link-menu">INÍCIO</a>
+							<a href="/home/" class="link-menu">INÍCIO</a>
+						</li>
+						{%if user.groups.all.0.name == 'Administrador' %}
+						<li>
+							<a class="link-menu" href="{% url 'restaurantes:restaurante_lista' %}">RESTAURANTES</a>
 						</li>
 						<li>
-							<a href="#sobre" class="link-menu">CADASTRO DE EMPRESAS</a>
+							<a class="link-menu" href="{% url 'comidas:comida_lista' %}">COMIDAS</a>
 						</li>
 						<li>
 							<a href="#contato" class="link-menu" data-toggle="dropdown">RELATÓRIOS</a>
 						</li>
+						{%elif user.groups.all.0.name == 'Restaurante' %}
+							<li>
+								<a class="link-menu" href="{% url 'cardapios:cardapio_lista'%}">CARDÁPIO</a>
+							</li>
+							<li>
+								<a class="link-menu" href="">PEDIDOS</a>
+							</li>
+						{%elif user.groups.all.0.name == 'Cliente' %}
+
+						{%endif%}
+
 					</ul>
 				</div>
 			</nav>

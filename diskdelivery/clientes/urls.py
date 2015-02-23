@@ -1,0 +1,12 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+from django.conf.urls import patterns, include, url
+
+urlpatterns = patterns('diskdelivery.comidas.views',
+
+ 
+    
+    
+
+)

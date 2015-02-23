@@ -11,5 +11,14 @@ urlpatterns = patterns('',
     url(r'logout/','django.contrib.auth.views.logout_then_login',{'login_url': '/'},name='logout'),
 
     url(r'^$', 'diskdelivery.core.views.inicio_site', name='inicio_site'),
+    url(r'^carregar/$', 'diskdelivery.core.views.carregar', name='carregar'),
     url(r'^home/$', 'diskdelivery.core.views.home', name='home'),
+
+
+    url(r'^comidas/',include('diskdelivery.comidas.urls',namespace='comidas')),
+    url(r'^cardapios/',include('diskdelivery.cardapios.urls',namespace='cardapios')),
+    url(r'^restaurantes/',include('diskdelivery.restaurantes.urls',namespace='restaurantes')),
+
+    url(r'^clientes/',include('diskdelivery.clientes.urls',namespace='clientes')),
+    url(r'^cadastro/$', 'diskdelivery.clientes.views.cadastro', name='cadastro'),
 )

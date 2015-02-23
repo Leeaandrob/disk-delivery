@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{%block content%}
+<link href="{{ STATIC_URL }}css/cliente.css" rel="stylesheet" type="text/css" />
+
+<ul class="breadcrumb">
+    <li><a href="/">Inicio</a> <span class="divider"></span></li>
+    <li><a href="{% url 'restaurantes:restaurante_lista' %}">Lista de Restaurantes</a></li>
+    <li class="active">Restaurante Novo</li>
+</ul>
+
+<div class="bs-callout bs-callout-danger">
+  <h4>Restaurante Novo</h4>
+</div>
+<form class="form-inline" method="POST" >
+    {% csrf_token %}            
+    {{form.as_p}}
+    <p><button type="submit" class="btn btn-success">Salvar</button></p>
+</form> 
+{%endblock%}
+
+
